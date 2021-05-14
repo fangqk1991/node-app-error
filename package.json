@@ -1,0 +1,56 @@
+{
+  "name": "@fangcha/app-error",
+  "version": "1.0.0",
+  "description": "An error class contains statusCode, extras.",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "test": "mocha --require ts-node/register tests/**/*.test.ts --timeout 100000 --exit",
+    "lint": "eslint . --fix --cache",
+    "build": "rm -rf ./lib/ && tsc"
+  },
+  "repository": "https://github.com/fangqk1991/node-app-error.git",
+  "keywords": [
+    "error",
+    "app-error",
+    "exception"
+  ],
+  "author": "fang <me@fangqk.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/assert": "^1.5.4",
+    "@types/mocha": "^8.2.2",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.3.0",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": true,
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "files": [
+    "lib/*",
+    "src/*"
+  ],
+  "nyc": {
+    "sourceMap": false
+  }
+}
