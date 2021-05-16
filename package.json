@@ -1,6 +1,6 @@
 {
   "name": "@fangcha/app-error",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An error class contains statusCode, extras.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
