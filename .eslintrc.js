@@ -8,13 +8,9 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint'],
   parserOptions: {
-    parser: '@typescript-eslint/parser',
-    project: './tsconfig.json',
+    project: null,
     ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
+    sourceType: 'module'
   },
   env: {
     mocha: true,
