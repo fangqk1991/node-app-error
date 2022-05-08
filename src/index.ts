@@ -31,6 +31,7 @@ export class AppException extends AppError<ErrorModel> {
     const errorBody: ErrorModel = {
       ...params,
       phrase: phrase,
+      message: params.message || phrase,
     }
     return new AppException(errorBody, params.statusCode || 400)
   }
