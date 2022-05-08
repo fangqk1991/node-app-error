@@ -17,13 +17,11 @@ export interface ErrorModel {
   statusCode?: number
 }
 
-export class AppException extends Error {
-  public name: string
-  public statusCode: number
+export class AppException extends AppError<ErrorModel> {
   public errorBody: ErrorModel
 
   constructor(errorBody: ErrorModel, statusCode = 400) {
-    super(JSON.stringify(errorBody))
+    super(JSON.stringify(errorBody), statusCode, errorBody)
     this.errorBody = errorBody
     this.name = 'AppException'
     this.statusCode = statusCode
