@@ -36,3 +36,18 @@ export class AppException extends AppError<ErrorModel> {
     return new AppException(errorBody, params.statusCode || 400)
   }
 }
+
+export class RedirectBreak extends AppError {
+  public readonly redirectUri: string
+
+  constructor(redirectUri: string, statusCode = 302) {
+    super(redirectUri)
+    this.name = 'RedirectBreak'
+    this.redirectUri = redirectUri
+    this.statusCode = statusCode
+  }
+
+  public static breakWithRedirectUri(redirectUri: string) {
+    return new RedirectBreak(redirectUri)
+  }
+}
